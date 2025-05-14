@@ -1,120 +1,193 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>বাগান থেকে</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      margin: 0;
       font-family: 'Noto Sans Bengali', sans-serif;
-      background-color: #fffdf5;
+      background-color: #fff;
       color: #333;
     }
+
     header {
-      background-color: #ffb347;
-      padding: 20px;
-      text-align: center;
-      color: white;
+      background-color: #f3f3f3;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    nav {
-      background-color: #f8d49d;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section.hero {
-      background: url('https://images.unsplash.com/photo-1590402494682-cd763b9e3f5f?auto=format&fit=crop&w=1050&q=80') no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 1px 1px 4px #000;
-      font-size: 2em;
-    }
-    section.about, section.products, section.contact {
-      padding: 40px 20px;
-      max-width: 900px;
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
       margin: auto;
     }
-    .product-list {
+
+    .logo {
+      font-size: 2em;
+      font-weight: bold;
+      color: #e69500;
+    }
+
+    nav {
+      margin-top: 10px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 6px 10px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #e69500;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1590402494682-cd763b9e3f5f?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      font-size: 2.5em;
+      text-align: center;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #e69500;
+    }
+
+    .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 30px;
     }
+
     .product {
       border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
+      border-radius: 10px;
+      overflow: hidden;
       background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
     .product img {
       width: 100%;
-      border-radius: 8px;
+      height: 200px;
+      object-fit: cover;
     }
-    footer {
-      background-color: #ffb347;
+
+    .product-content {
+      padding: 15px;
+    }
+
+    .product-content h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .contact {
+      background: #f9f9f9;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer {
+      background: #e69500;
+      color: white;
       text-align: center;
       padding: 20px;
-      color: white;
+    }
+
+    a {
+      color: #e69500;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>বাগান থেকে</h1>
-    <p>বাগান থেকে সরাসরি আপনার দরজায়</p>
+    <div class="container">
+      <div class="logo">বাগান থেকে</div>
+      <nav>
+        <a href="#home">হোম</a>
+        <a href="#about">আমাদের সম্পর্কে</a>
+        <a href="#products">আম</a>
+        <a href="#contact">যোগাযোগ</a>
+      </nav>
+    </div>
   </header>
-  <nav>
-    <a href="#about">আমাদের সম্পর্কে</a>
-    <a href="#products">আমের তালিকা</a>
-    <a href="#contact">যোগাযোগ</a>
-  </nav>
-  <section class="hero">
-    এখন অর্ডার করুন সেরা জাতের ফ্রেশ আম!
+
+  <section class="hero" id="home">
+    <div>বাগান থেকে সরাসরি টাটকা আম</div>
   </section>
-  <section id="about" class="about">
-    <h2>আমাদের সম্পর্কে</h2>
-    <p>“বাগান থেকে” একটি বিশ্বস্ত অনলাইন প্ল্যাটফর্ম, যেখান থেকে আপনি সরাসরি বাগান থেকে সংগৃহীত টাটকা আম কিনতে পারবেন। আমরা সারা বাংলাদেশে হোম ডেলিভারি দেই।</p>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">আমাদের সম্পর্কে</h2>
+      <p>
+        আমরা “বাগান থেকে” আপনাদের দিচ্ছি সরাসরি বাগান থেকে সংগৃহীত, কোনো প্রিজারভেটিভ ছাড়াই খাঁটি আম। আমরা রাজশাহী এবং চাঁপাইনবাবগঞ্জের বাগান থেকে সারা বাংলাদেশে হোম ডেলিভারি করি।
+      </p>
+    </div>
   </section>
-  <section id="products" class="products">
-    <h2>আমের তালিকা</h2>
-    <div class="product-list">
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1623073896074-cb75f1b91619?auto=format&fit=crop&w=600&q=80" alt="Langra Mango">
-        <h3>ল্যাংড়া</h3>
-        <p>দাম: ১৫০ টাকা/কেজি</p>
-      </div>
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1625215277593-3ab41035a2b2?auto=format&fit=crop&w=600&q=80" alt="Himsagar Mango">
-        <h3>হিমসাগর</h3>
-        <p>দাম: ১৮০ টাকা/কেজি</p>
-      </div>
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1610098013139-9c3383bc1dfd?auto=format&fit=crop&w=600&q=80" alt="Amrapali Mango">
-        <h3>আম্রপালি</h3>
-        <p>দাম: ১৭০ টাকা/কেজি</p>
+
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">আমের তালিকা</h2>
+      <div class="products">
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1623073896074-cb75f1b91619?auto=format&fit=crop&w=600&q=80" alt="Langra Mango">
+          <div class="product-content">
+            <h3>ল্যাংড়া</h3>
+            <p>৳১৫০ / কেজি</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1625215277593-3ab41035a2b2?auto=format&fit=crop&w=600&q=80" alt="Himsagar Mango">
+          <div class="product-content">
+            <h3>হিমসাগর</h3>
+            <p>৳১৮০ / কেজি</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1610098013139-9c3383bc1dfd?auto=format&fit=crop&w=600&q=80" alt="Amrapali Mango">
+          <div class="product-content">
+            <h3>আম্রপালি</h3>
+            <p>৳১৭০ / কেজি</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
   <section id="contact" class="contact">
-    <h2>যোগাযোগ করুন</h2>
-    <p>ফেসবুকে মেসেজ করুন: <a href="https://facebook.com/your-page" target="_blank">facebook.com/your-page</a></p>
-    <p>ফোন: ০১৭xxxxxxxx</p>
+    <div class="container">
+      <h2 class="section-title">যোগাযোগ করুন</h2>
+      <p>ফেসবুক: <a href="https://facebook.com/your-page" target="_blank">facebook.com/your-page</a></p>
+      <p>ফোন: ০১৭xxxxxxxx</p>
+    </div>
   </section>
-  <footer>
-    &copy; ২০২৫ বাগান থেকে - সর্বস্বত্ব সংরক্ষিত
+
+  <footer class="footer">
+    &copy; ২০২৫ বাগান থেকে — সর্বস্বত্ব সংরক্ষিত
   </footer>
 </body>
 </html>
