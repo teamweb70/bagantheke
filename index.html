@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>বাগান থেকে</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -28,10 +30,8 @@
       margin: auto;
     }
 
-    .logo {
-      font-size: 2em;
-      font-weight: bold;
-      color: #e69500;
+    .logo img {
+      height: 100px;
     }
 
     nav {
@@ -53,7 +53,6 @@
       color: #e69500;
     }
 
-    /* হোম সেকশন */
     .hero {
       width: 100%;
       overflow: hidden;
@@ -92,8 +91,8 @@
 
     .product img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
     }
 
     .product-content {
@@ -103,6 +102,25 @@
     .product-content h3 {
       margin-bottom: 10px;
       color: #333;
+    }
+
+    .order-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #2e7d32;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .order-button:hover {
+      background-color: #1b5e20;
     }
 
     .contact {
@@ -120,33 +138,14 @@
     a {
       color: #e69500;
     }
-    .order-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #2e7d32; /* ডার্ক সবুজ */
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.order-button:hover {
-  background-color: #1b5e20; /* আরও ডার্ক সবুজ হোভার */
-}
-
   </style>
 </head>
 <body>
   <header>
     <div class="container">
-        <div class="logo">
-          <img src="https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/496941487_122164026548366306_4531966436698426469_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=UYlhJ7VoLsEQ7kNvwF3CmLu&_nc_oc=Admncxn-_omZ39BX9kIUvQ_6VuXXRh5RY8zN8Rm--3zEmqAAtf3sw8qgTItMwjrIZOc&_nc_zt=23&_nc_ht=scontent.fdac138-1.fna&_nc_gid=fRr5ZtmLMIcCmDaOStiljA&oh=00_AfJ1gS_05tx_Ved_Hno8rBnd3rP22dYTiCRt_e3twTHUrg&oe=682AAD15" alt="বাগান থেকে" style="height: 100px;">
-        </div>
+      <div class="logo">
+        <img src="https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/496941487_122164026548366306_4531966436698426469_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=UYlhJ7VoLsEQ7kNvwF3CmLu&_nc_oc=Admncxn-_omZ39BX9kIUvQ_6VuXXRh5RY8zN8Rm--3zEmqAAtf3sw8qgTItMwjrIZOc&_nc_zt=23&_nc_ht=scontent.fdac138-1.fna&_nc_gid=fRr5ZtmLMIcCmDaOStiljA&oh=00_AfJ1gS_05tx_Ved_Hno8rBnd3rP22dYTiCRt_e3twTHUrg&oe=682AAD15" alt="বাগান থেকে">
+      </div>
       <nav>
         <a href="#home">হোম</a>
         <a href="#about">আমাদের সম্পর্কে</a>
@@ -157,8 +156,7 @@
   </header>
 
   <section class="hero" id="home">
-    <img src="https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/496846024_122163968942366306_4980298352425944762_n.png?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=K7Kf1iidyAsQ7kNvwGkdGI9&_nc_oc=AdlCQrYF88OeBOZqwj7ZRYX0uljM8QMYidxANU7wO5me6gL40G2kbON09nad4mi9KoE&_nc_zt=23&_nc_ht=scontent.fdac138-1.fna&_nc_gid=NixTU9tinwm9SxLO3-f7qQ&oh=00_AfL_enQXx936SbdAE-e4nwqU3f6SeyWD-shhtxvtROTooQ&oe=682AA222" 
-         alt="বাগান থেকে" />
+    <img src="https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/496846024_122163968942366306_4980298352425944762_n.png?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=K7Kf1iidyAsQ7kNvwGkdGI9&_nc_oc=AdlCQrYF88OeBOZqwj7ZRYX0uljM8QMYidxANU7wO5me6gL40G2kbON09nad4mi9KoE&_nc_zt=23&_nc_ht=scontent.fdac138-1.fna&_nc_gid=NixTU9tinwm9SxLO3-f7qQ&oh=00_AfL_enQXx936SbdAE-e4nwqU3f6SeyWD-shhtxvtROTooQ&oe=682AA222" alt="বাগান থেকে" />
   </section>
 
   <section id="about">
@@ -174,34 +172,36 @@
     <div class="container">
       <h2 class="section-title">আমের তালিকা</h2>
       <div class="products">
+
         <div class="product">
-          <img src="https://i.imgur.com/qidjVZ3.png" alt="Langra Mango" style="width: 100%; height: auto; object-fit: contain;" />
+          <img src="https://i.imgur.com/qidjVZ3.png" alt="Langra Mango" />
           <div class="product-content">
             <h3>ল্যাংড়া</h3>
             <p>৳১৫০ / কেজি</p>
             <a href="https://facebook.com/messages/t/yourpage" target="_blank" class="order-button">অর্ডার করুন</a>
           </div>
         </div>
-      </div>
+
         <div class="product">
-          <img src="https://i.imgur.com/qidjVZ3.png" alt="Langra Mango" style="width: 100%; height: auto; object-fit: contain;" />
+          <img src="https://i.imgur.com/qidjVZ3.png" alt="Langra Mango" />
           <div class="product-content">
-            <h3>ল্যাংড়া</h3>
-            <p>৳১৫০ / কেজি</p>
+            <h3>হিমসাগর</h3>
+            <p>৳১৬০ / কেজি</p>
             <a href="https://facebook.com/messages/t/yourpage" target="_blank" class="order-button">অর্ডার করুন</a>
           </div>
         </div>
-      </div>
+
         <div class="product">
-          <img src="https://i.imgur.com/qidjVZ3.png" alt="Langra Mango" style="width: 100%; height: auto; object-fit: contain;" />
+          <img src="https://i.imgur.com/qidjVZ3.png" alt="Langra Mango" />
           <div class="product-content">
-            <h3>ল্যাংড়া</h3>
-            <p>৳১৫০ / কেজি</p>
+            <h3>ফজলি</h3>
+            <p>৳১৪০ / কেজি</p>
             <a href="https://facebook.com/messages/t/yourpage" target="_blank" class="order-button">অর্ডার করুন</a>
           </div>
         </div>
+
       </div>
-  </div>
+    </div>
   </section>
 
   <section id="contact" class="contact">
